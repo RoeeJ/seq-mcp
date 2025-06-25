@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  seq:
+    image: datalust/seq:latest
+    container_name: seq-dev
+    ports:
+      - "5341:5341"
+    environment:
+      - ACCEPT_EULA=Y
+    volumes:
+      - seq-data:/data
+
+  seq-mcp-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: seq-mcp-dev
+    environment:
+      - SEQ_URL=http://seq:5341
+      - SEQ_API_KEY=${SEQ_API_KEY:-}
+      - SEQ_DEFAULT_LIMIT=100
+      - SEQ_TIMEOUT=30000
+    depends_on:
+      - seq
+    stdin_open: true
+    tty: true
+
+volumes:
+  seq-data:
