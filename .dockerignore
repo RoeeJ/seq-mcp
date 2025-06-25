@@ -23,5 +23,4 @@ README.md
 LICENSE
 .eslintrc.json
 .prettierrc
-tsconfig.json
 vitest.config.ts
