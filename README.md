@@ -2,6 +2,10 @@
 
 An MCP (Model Context Protocol) server that enables LLMs to query and analyze logs from SEQ structured logging server.
 
+<a href="https://glama.ai/mcp/servers/@RoeeJ/seq-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@RoeeJ/seq-mcp/badge" alt="SEQ Server MCP server" />
+</a>
+
 ## Features
 
 - **Search Events**: Query logs with powerful SEQ filter syntax
